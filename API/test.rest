@@ -1,0 +1,31 @@
+###
+GET http://localhost:8000
+
+### GET = Get all users
+GET http://localhost:8000/users
+
+### POST = Create a new user
+POST http://localhost:8000/users/new-user
+Content-Type: application/json
+
+{
+        "name": "User Test",
+        "email": "test@test.com",
+        "password": "test password"
+}
+
+### GET = Get user by ID
+GET http://localhost:8000/users/1
+
+### PUT = Update user by ID
+PUT http://localhost:8000/users/update-user/5
+Content-Type: application/json
+
+{
+        "name": "Test User",
+        "email": "example@example.com",
+        "password": "test"
+}
+
+### DELETE = Delete user by ID
+DELETE http://localhost:8000/users/delete-user/4
